@@ -1,34 +1,17 @@
-.#{$prefix}block
+.block
   +block
 
-.#{$prefix}container
-  position: relative
-  +desktop
-    margin: 0 auto
-    max-width: $desktop - 40px // 960px
-    // Modifiers
-    &.#{$prefix}is-fluid
-      margin: 0 20px
-      max-width: none
-  +widescreen
-    max-width: $widescreen - 40px // 1152px
-
-.#{$prefix}delete
+.delete
   +delete
 
-.#{$prefix}fa
-  font-size: 21px
-  text-align: center
-  vertical-align: top
-
-.#{$prefix}heading
+.heading
   display: block
   font-size: 11px
   letter-spacing: 1px
   margin-bottom: 5px
   text-transform: uppercase
 
-.#{$prefix}highlight
+.highlight
   +block
   font-weight: $weight-normal
   max-width: 100%
@@ -38,10 +21,10 @@
     overflow: auto
     max-width: 100%
 
-.#{$prefix}loader
+.loader
   +loader
 
-.#{$prefix}number
+.number
   align-items: center
   background-color: $background
   border-radius: 290486px

@@ -3,13 +3,11 @@ layout: default
 route: index
 ---
 
-<section class="hero is-medium has-text-centered">
-  <div class="hero-head">
-    <div class="container">
-      {% include header.html %}
-    </div>
-  </div>
+<div class="container">
+  {% include navbar.html id="Index" transparent=true boxed=true %}
+</div>
 
+<section class="hero is-medium has-text-centered">
   <div class="hero-body">
     <div class="container">
       <p id="b">
@@ -59,7 +57,7 @@ route: index
             <i class="fa fa-desktop"></i>
           </span>
           <p class="title is-4"><strong>Responsive</strong></p>
-          <p class="subtitle">Designed for <strong>mobile</strong>-first</p>
+          <p class="subtitle">Designed for <strong>mobile</strong> first</p>
         </a>
         <a class="column has-text-centered" href="{{ site.url }}/documentation/overview/modular/">
           <span class="icon is-large">
@@ -68,7 +66,7 @@ route: index
           <p class="title is-4"><strong>Modular</strong></p>
           <p class="subtitle">Just import what you <strong>need</strong></p>
         </a>
-        <a class="column has-text-centered" href="{{ site.url }}/documentation/grid/columns/">
+        <a class="column has-text-centered" href="{{ site.url }}/documentation/columns/basics/">
           <span class="icon is-large">
             <i class="fa fa-css3"></i>
           </span>
@@ -87,13 +85,17 @@ route: index
   </div>
 </section>
 
+<section class="bd-tws-home">
+  {% include tws.html %}
+</section>
+
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.url }}/documentation/grid/columns">
-        <span class="icon is-medium">
-          <i class="fa fa-pause"></i>
-        </span>
+      <span class="icon is-medium">
+        <i class="fa fa-pause"></i>
+      </span>
+      <a href="{{ site.url }}/documentation/columns/basics">
         Simple <strong>columns</strong>
       </a>
     </h3>
@@ -160,13 +162,17 @@ route: index
         </div>
       </div>
     </div>
-    <p class="control has-addons has-addons-centered">
-      <a id="add" class="button is-unselectable">Add column</a>
-      <a id="remove" class="button is-unselectable">Remove column</a>
-    </p>
+    <div class="field has-addons has-addons-centered">
+      <p class="control">
+        <a id="add" class="button is-unselectable">Add column</a>
+      </p>
+      <p class="control">
+        <a id="remove" class="button is-unselectable">Remove column</a>
+      </p>
+    </div>
     <div id="message" class="message is-info">
       <p class="message-header">Info</p>
-      <p class="message-body">While it's possible to add as many columns as you want, it is recommend to stick with <strong>12 columns</strong>.<br>
+      <p class="message-body">While it's possible to add as many columns as you want, it is recommended to stick with <strong>12 columns</strong>.<br>
       If you want smaller divisions, you can always <strong>nest</strong> columns.</p>
     </div>
     <div id="markup">
@@ -188,14 +194,14 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.url }}/documentation/grid/tiles">
-        <span class="icon is-medium">
-          <i class="fa fa-th-large"></i>
-        </span>
+      <span class="icon is-medium">
+        <i class="fa fa-th-large"></i>
+      </span>
+      <a href="{{ site.url }}/documentation/layout/tiles">
         Magic <strong>tiles</strong>
       </a>
     </h3>
-    <h4 class="subtitle is-4">A single element for a Metro UI CSS grid</h4>
+    <h4 class="subtitle is-4">A single element for a Metro UI-style CSS grid</h4>
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
         <div class="tile">
@@ -241,6 +247,7 @@ route: index
         </article>
       </div>
     </div>
+    <div class="highlight-full">
 {% highlight html %}
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
@@ -273,6 +280,7 @@ route: index
 </div>
 {% endhighlight %}
   </div>
+    </div>
 </section>
 
 <hr class="is-marginless">
@@ -280,10 +288,10 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.url }}/documentation/components/level/">
-        <span class="icon is-medium">
-          <i class="fa fa-arrows-h"></i>
-        </span>
+      <span class="icon is-medium">
+        <i class="fa fa-arrows-h"></i>
+      </span>
+      <a href="{{ site.url }}/documentation/layout/level/">
         Flexible <strong>horizontal level</strong>
       </a>
     </h3>
@@ -301,12 +309,16 @@ route: index
           </a>
         </p>
         <div class="level-item">
-          <p class="control has-addons">
-            <input class="input" type="text" placeholder="Filter">
-            <button class="button">
-              Search
-            </button>
-          </p>
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input" type="text" placeholder="Filter">
+            </p>
+            <p class="control">
+              <button class="button">
+                Search
+              </button>
+            </p>
+          </div>
         </div>
       </div>
       <div class="level-right">
@@ -344,10 +356,10 @@ route: index
     <div class="columns is-vcentered">
       <div class="column">
         <h3 class="title is-2">
-          <a href="{{ site.url }}/documentation/components/media-object/">
-            <span class="icon is-medium">
-              <i class="fa fa-magic"></i>
-            </span>
+          <span class="icon is-medium">
+            <i class="fa fa-magic"></i>
+          </span>
+          <a href="{{ site.url }}/documentation/layout/media-object/">
             Versatile <strong>media object</strong>
           </a>
         </h3>
@@ -370,7 +382,7 @@ route: index
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
                 </p>
               </div>
-              <nav class="level">
+              <nav class="level is-mobile">
                 <div class="level-left">
                   <a class="level-item">
                     <span class="icon is-small"><i class="fa fa-reply"></i></span>
@@ -405,10 +417,10 @@ route: index
   <div class="hero-body">
     <div class="container has-text-centered">
       <h3 class="title is-2">
+        <span class="icon is-medium">
+          <i class="fa fa-arrows-v"></i>
+        </span>
         <a href="{{ site.url }}/documentation/layout/hero/">
-          <span class="icon is-medium">
-            <i class="fa fa-arrows-v"></i>
-          </span>
           Easy <strong>vertical centering</strong> in <strong>fullscreen</strong>
         </a>
       </h3>
@@ -432,10 +444,10 @@ route: index
     <div class="columns is-vcentered">
       <div class="column">
         <h3 class="title is-2">
-          <a href="{{ site.url }}/documentation/modifiers/syntax/">
-            <span class="icon is-medium">
-              <i class="fa fa-cogs"></i>
-            </span>
+          <span class="icon is-medium">
+            <i class="fa fa-cogs"></i>
+          </span>
+          <a href="{{ site.url }}/documentation/modifiers/syntax/" style="display: block;">
             Compose your element with <strong>modifier</strong> classes
           </a>
         </h3>
@@ -443,27 +455,35 @@ route: index
       </div>
       <div class="column">
         <div class="block">
-          <p class="control">
-            <code>button</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button</code>
+            </p>
+          </div>
           <a class="button">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary</code>
+            </p>
+          </div>
           <a class="button is-primary">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary is-large</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary is-large</code>
+            </p>
+          </div>
           <a class="button is-primary is-large">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary is-large is-loading</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary is-large is-loading</code>
+            </p>
+          </div>
           <a class="button is-primary is-large is-loading">Button</a>
         </div>
       </div>
@@ -476,127 +496,17 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
+      <span class="icon is-medium">
+        <i class="fa fa-asterisk"></i>
+      </span>
       <a href="{{ site.url }}/documentation/elements/box/">
-        <span class="icon is-medium">
-          <i class="fa fa-asterisk"></i>
-        </span>
-        And all the usual <strong>elements</strong>
+        And all the usual <strong>elements</strong> and <strong>components</strong>
       </a>
     </h3>
-    <h4 class="subtitle is-4">Buttons, form controls, menus, tabs, titles, notifications, etc.</h4>
-
-    <div class="columns">
-      <div class="column is-one-third">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="{{site.url}}/images/placeholders/1280x960.png" alt="Image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image" style="height: 40px; width: 40px;">
-                  <img src="{{site.url}}/images/placeholders/96x96.png" alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <p class="title is-4">Card</p>
-                <p class="subtitle is-6">Subtitle</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-              <br>
-              <small>11:09 PM - 1 Jan 2016</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <p class="title">Title</p>
-        <p class="subtitle">Subtitle</p>
-        <div class="control is-grouped">
-          <p class="control">
-            <span class="select">
-              <select>
-                <option>Dropdown</option>
-              </select>
-            </span>
-          </p>
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="Text input">
-          </p>
-        </div>
-        <p class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            Checkbox
-          </label>
-        </p>
-        <p class="control">
-          <label class="radio">
-            <input type="radio" name="question">
-            Radio
-          </label>
-          <label class="radio">
-            <input type="radio" name="question">
-            Buttons
-          </label>
-        </p>
-        <p class="control">
-          <button class="button is-primary">Button</button>
-        </p>
-        <div class="tabs is-boxed">
-          <ul>
-            <li class="is-active">
-              <a>
-                <span class="icon is-small"><i class="fa fa-inbox"></i></span>
-                <span>Inbox</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="icon is-small"><i class="fa fa-user"></i></span>
-                <span>Profile</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="icon is-small"><i class="fa fa-comments-o"></i></span>
-                <span>Comments</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="icon is-small"><i class="fa fa-cog"></i></span>
-                <span>Settings</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <p class="block">
-          <span class="tag is-dark">Tag<button class="delete is-small"></button></span>
-          <span class="tag is-info">Two<button class="delete is-small"></button></span>
-          <span class="tag is-danger">Three<button class="delete is-small"></button></span>
-        </p>
-        <div class="message is-warning">
-          <div class="message-header">
-            Hello world
-          </div>
-          <div class="message-body">
-            Message
-          </div>
-        </div>
-        <div class="notification is-success">
-          <button class="delete"></button>
-          Success!
-        </div>
-      </div>
-    </div>
   </div>
 </section>
+
+{% include features.html %}
 
 <hr class="is-marginless">
 
@@ -608,7 +518,7 @@ route: index
         <span class="icon">
           <i class="fa fa-book"></i>
         </span>
-        <span>Check the <strong>Docs</strong></span>
+        <span>Check the <strong>docs</strong></span>
       </a>
       <a class="button is-black is-large" href="{{ site.github }}">
         <span class="icon">

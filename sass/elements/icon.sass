@@ -1,12 +1,21 @@
-.#{$prefix}icon
-  +fa(21px, 1.5rem)
-  .#{$prefix}fa
-    font-size: inherit
-    line-height: inherit
+$icon-dimensions: 1.5rem !default
+$icon-dimensions-small: 1rem !default
+$icon-dimensions-medium: 2rem !default
+$icon-dimensions-large: 3rem !default
+
+.icon
+  align-items: center
+  display: inline-flex
+  justify-content: center
+  height: $icon-dimensions
+  width: $icon-dimensions
   // Sizes
-  &.#{$prefix}is-small
-    +fa(14px, 1rem)
-  &.#{$prefix}is-medium
-    +fa(28px, 2rem)
-  &.#{$prefix}is-large
-    +fa(42px, 3rem)
+  &.is-small
+    height: $icon-dimensions-small
+    width: $icon-dimensions-small
+  &.is-medium
+    height: $icon-dimensions-medium
+    width: $icon-dimensions-medium
+  &.is-large
+    height: $icon-dimensions-large
+    width: $icon-dimensions-large

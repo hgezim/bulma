@@ -10,17 +10,17 @@ $subtitle-weight: $weight-normal !default
 $subtitle-strong-color: $grey-darker !default
 $subtitle-strong-weight: $weight-semibold !default
 
-.title,
-.subtitle
+.#{$prefix}title,
+.#{$prefix}subtitle
   +block
   word-break: break-word
   em,
   span
     font-weight: inherit
-  .tag
+  .#{$prefix}tag
     vertical-align: middle
 
-.title
+.#{$prefix}title
   color: $title-color
   font-size: $title-size
   font-weight: $title-weight
@@ -28,9 +28,9 @@ $subtitle-strong-weight: $weight-semibold !default
   strong
     color: $title-strong-color
     font-weight: $title-strong-weight
-  & + .highlight
+  & + .#{$prefix}highlight
     margin-top: -0.75rem
-  &:not(.is-spaced) + .subtitle
+  &:not(.is-spaced) + .#{$prefix}subtitle
     margin-top: -1.5rem
   // Sizes
   @each $size in $sizes
@@ -38,7 +38,7 @@ $subtitle-strong-weight: $weight-semibold !default
     &.is-#{$i}
       font-size: $size
 
-.subtitle
+.#{$prefix}subtitle
   color: $subtitle-color
   font-size: $subtitle-size
   font-weight: $subtitle-weight
@@ -46,7 +46,7 @@ $subtitle-strong-weight: $weight-semibold !default
   strong
     color: $subtitle-strong-color
     font-weight: $subtitle-strong-weight
-  &:not(.is-spaced) + .title
+  &:not(.is-spaced) + .#{$prefix}title
     margin-top: -1.5rem
   // Sizes
   @each $size in $sizes

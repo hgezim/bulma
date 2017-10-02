@@ -10,12 +10,12 @@
   // Modifiers
   &.is-mobile
     display: flex
-    .level-left,
-    .level-right
+    .#{$prefix}level-left,
+    .#{$prefix}level-right
       display: flex
-    .level-left + .level-right
+    .#{$prefix}level-left + .#{$prefix}level-right
       margin-top: 0
-    .level-item
+    .#{$prefix}level-item
       &:not(:last-child)
         margin-bottom: 0
       &:not(.is-narrow)
@@ -23,7 +23,7 @@
   // Responsiveness
   +tablet
     display: flex
-    & > .level-item
+    & > .#{$prefix}level-item
       &:not(.is-narrow)
         flex-grow: 1
 

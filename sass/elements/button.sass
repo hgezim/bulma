@@ -35,7 +35,7 @@ $button-static-border-color: $grey-lighter !default
 =button-large
   font-size: $size-large
 
-.button
+.#{$prefix}button
   +control
   +unselectable
   background-color: $button-background-color
@@ -49,7 +49,7 @@ $button-static-border-color: $grey-lighter !default
   white-space: nowrap
   strong
     color: inherit
-  .icon
+  .#{$prefix}icon
     &,
     &.is-small,
     &.is-medium,

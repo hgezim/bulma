@@ -13,20 +13,20 @@ $dropdown-item-active-background-color: $primary !default
 
 $dropdown-divider-background-color: $border !default
 
-.dropdown
+.#{$prefix}dropdown
   display: inline-flex
   position: relative
   vertical-align: top
   &.is-active,
   &.is-hoverable:hover
-    .dropdown-menu
+    .#{$prefix}dropdown-menu
       display: block
   &.is-right
-    .dropdown-menu
+    .#{$prefix}dropdown-menu
       left: auto
       right: 0
 
-.dropdown-menu
+.#{$prefix}dropdown-menu
   display: none
   left: 0
   min-width: 12rem
@@ -35,14 +35,14 @@ $dropdown-divider-background-color: $border !default
   top: 100%
   z-index: $dropdown-content-z
 
-.dropdown-content
+.#{$prefix}dropdown-content
   background-color: $dropdown-content-background-color
   border-radius: $dropdown-content-radius
   box-shadow: $dropdown-content-shadow
   padding-bottom: 0.5rem
   padding-top: 0.5rem
 
-.dropdown-item
+.#{$prefix}dropdown-item
   color: $dropdown-item-color
   display: block
   font-size: 0.875rem
@@ -60,7 +60,7 @@ a.dropdown-item
     background-color: $dropdown-item-active-background-color
     color: $dropdown-item-active-color
 
-.dropdown-divider
+.#{$prefix}dropdown-divider
   background-color: $dropdown-divider-background-color
   border: none
   display: block

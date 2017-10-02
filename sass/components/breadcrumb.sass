@@ -4,7 +4,7 @@ $breadcrumb-item-active-color: $text-strong !default
 
 $breadcrumb-item-separator-color: $text !default
 
-.breadcrumb
+.#{$prefix}breadcrumb
   +block
   +unselectable
   align-items: stretch
@@ -40,7 +40,7 @@ $breadcrumb-item-separator-color: $text !default
     flex-grow: 1
     flex-shrink: 0
     justify-content: flex-start
-  .icon
+  .#{$prefix}icon
     &:first-child
       margin-right: 0.5em
     &:last-child

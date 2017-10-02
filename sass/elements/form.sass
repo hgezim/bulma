@@ -62,8 +62,8 @@ $help-size: $size-small !default
     +placeholder
       color: rgba($input-disabled-color, 0.3)
 
-.input,
-.textarea
+.#{$prefix}input,
+.#{$prefix}textarea
   +input
   box-shadow: $input-shadow
   max-width: 100%
@@ -97,7 +97,7 @@ $help-size: $size-small !default
     display: inline
     width: auto
 
-.input
+.#{$prefix}input
   &.is-static
     background-color: transparent
     border-color: transparent
@@ -105,7 +105,7 @@ $help-size: $size-small !default
     padding-left: 0
     padding-right: 0
 
-.textarea
+.#{$prefix}textarea
   display: block
   max-width: 100%
   min-width: 100%
@@ -120,8 +120,8 @@ $help-size: $size-small !default
   &.has-fixed-size
     resize: none
 
-.checkbox,
-.radio
+.#{$prefix}checkbox,
+.#{$prefix}radio
   cursor: pointer
   display: inline-block
   line-height: 1.25
@@ -134,11 +134,11 @@ $help-size: $size-small !default
     color: $input-disabled-color
     cursor: not-allowed
 
-.radio
-  & + .radio
+.#{$prefix}radio
+  & + .#{$prefix}radio
     margin-left: 0.5em
 
-.select
+.#{$prefix}select
   display: inline-block
   max-width: 100%
   position: relative
@@ -213,7 +213,7 @@ $help-size: $size-small !default
     &.is-large:after
       font-size: $size-large
 
-.file
+.#{$prefix}file
   +unselectable
   align-items: stretch
   display: flex
@@ -224,25 +224,25 @@ $help-size: $size-small !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
-      .file-cta
+      .#{$prefix}file-cta
         background-color: $color
         border-color: transparent
         color: $color-invert
       &:hover,
       &.is-hovered
-        .file-cta
+        .#{$prefix}file-cta
           background-color: darken($color, 2.5%)
           border-color: transparent
           color: $color-invert
       &:focus,
       &.is-focused
-        .file-cta
+        .#{$prefix}file-cta
           border-color: transparent
           box-shadow: 0 0 0.5em rgba($color, 0.25)
           color: $color-invert
       &:active,
       &.is-active
-        .file-cta
+        .#{$prefix}file-cta
           background-color: darken($color, 5%)
           border-color: transparent
           color: $color-invert
@@ -251,20 +251,20 @@ $help-size: $size-small !default
     font-size: $size-small
   &.is-medium
     font-size: $size-medium
-    .file-icon
-      .fa
+    .#{$prefix}file-icon
+      .#{$prefix}fa
         font-size: 21px
   &.is-large
     font-size: $size-large
-    .file-icon
-      .fa
+    .#{$prefix}file-icon
+      .#{$prefix}fa
         font-size: 28px
   // Modifiers
   &.has-name
-    .file-cta
+    .#{$prefix}file-cta
       border-bottom-right-radius: 0
       border-top-right-radius: 0
-    .file-name
+    .#{$prefix}file-name
       border-bottom-left-radius: 0
       border-top-left-radius: 0
   &.is-centered
@@ -272,49 +272,49 @@ $help-size: $size-small !default
   &.is-right
     justify-content: flex-end
   &.is-boxed
-    .file-label
+    .#{$prefix}file-label
       flex-direction: column
-    .file-cta
+    .#{$prefix}file-cta
       flex-direction: column
       height: auto
       padding: 1em 3em
-    .file-name
+    .#{$prefix}file-name
       border-width: 0 1px 1px
-    .file-icon
+    .#{$prefix}file-icon
       height: 1.5em
       width: 1.5em
-      .fa
+      .#{$prefix}fa
         font-size: 21px
     &.is-small
-      .file-icon .fa
+      .#{$prefix}file-icon .#{$prefix}fa
         font-size: 14px
     &.is-medium
-      .file-icon .fa
+      .#{$prefix}file-icon .#{$prefix}fa
         font-size: 28px
     &.is-large
-      .file-icon .fa
+      .#{$prefix}file-icon .#{$prefix}fa
         font-size: 35px
     &.has-name
-      .file-cta
+      .#{$prefix}file-cta
         border-radius: $file-radius $file-radius 0 0
-      .file-name
+      .#{$prefix}file-name
         border-radius: 0 0 $file-radius $file-radius
         border-width: 0 1px 1px
   &.is-right
-    .file-cta
+    .#{$prefix}file-cta
       border-radius: 0 $file-radius $file-radius 0
-    .file-name
+    .#{$prefix}file-name
       border-radius: $file-radius 0 0 $file-radius
       border-width: 1px 0 1px 1px
       order: -1
   &.is-fullwidth
-    .file-label
+    .#{$prefix}file-label
       width: 100%
-    .file-name
+    .#{$prefix}file-name
       flex-grow: 1
       max-width: none
 
-.file-label
+.#{$prefix}file-label
   align-items: stretch
   display: flex
   cursor: pointer
@@ -322,19 +322,19 @@ $help-size: $size-small !default
   overflow: hidden
   position: relative
   &:hover
-    .file-cta
+    .#{$prefix}file-cta
       background-color: darken($file-cta-background-color, 2.5%)
       color: $file-cta-hover-color
-    .file-name
+    .#{$prefix}file-name
       border-color: darken($file-name-border-color, 2.5%)
   &:active
-    .file-cta
+    .#{$prefix}file-cta
       background-color: darken($file-cta-background-color, 5%)
       color: $file-cta-active-color
-    .file-name
+    .#{$prefix}file-name
       border-color: darken($file-name-border-color, 5%)
 
-.file-input
+.#{$prefix}file-input
   height: 0.01em
   left: 0
   outline: none
@@ -342,8 +342,8 @@ $help-size: $size-small !default
   top: 0
   width: 0.01em
 
-.file-cta,
-.file-name
+.#{$prefix}file-cta,
+.#{$prefix}file-name
   +control
   border-color: $file-border-color
   border-radius: $file-radius
@@ -352,11 +352,11 @@ $help-size: $size-small !default
   padding-right: 1em
   white-space: nowrap
 
-.file-cta
+.#{$prefix}file-cta
   background-color: $file-cta-background-color
   color: $file-cta-color
 
-.file-name
+.#{$prefix}file-name
   border-color: $file-name-border-color
   border-style: $file-name-border-style
   border-width: $file-name-border-width
@@ -366,17 +366,17 @@ $help-size: $size-small !default
   text-align: left
   text-overflow: ellipsis
 
-.file-icon
+.#{$prefix}file-icon
   align-items: center
   display: flex
   height: 1em
   justify-content: center
   margin-right: 0.5em
   width: 1em
-  .fa
+  .#{$prefix}fa
     font-size: 14px
 
-.label
+.#{$prefix}label
   color: $label-color
   display: block
   font-size: $size-normal
@@ -391,7 +391,7 @@ $help-size: $size-small !default
   &.is-large
     font-size: $size-large
 
-.help
+.#{$prefix}help
   display: block
   font-size: $help-size
   margin-top: 0.25rem
@@ -402,31 +402,31 @@ $help-size: $size-small !default
 
 // Containers
 
-.field
+.#{$prefix}field
   &:not(:last-child)
     margin-bottom: 0.75rem
   // Modifiers
   &.has-addons
     display: flex
     justify-content: flex-start
-    .control
+    .#{$prefix}control
       &:not(:last-child)
         margin-right: -1px
       &:first-child
-        .button,
-        .input,
-        .select select
+        .#{$prefix}button,
+        .#{$prefix}input,
+        .#{$prefix}select select
           border-bottom-left-radius: $input-radius
           border-top-left-radius: $input-radius
       &:last-child
-        .button,
-        .input,
-        .select select
+        .#{$prefix}button,
+        .#{$prefix}input,
+        .#{$prefix}select select
           border-bottom-right-radius: $input-radius
           border-top-right-radius: $input-radius
-      .button,
-      .input,
-      .select select
+      .#{$prefix}button,
+      .#{$prefix}input,
+      .#{$prefix}select select
         border-radius: 0
         &:hover,
         &.is-hovered
@@ -445,13 +445,13 @@ $help-size: $size-small !default
     &.has-addons-right
       justify-content: flex-end
     &.has-addons-fullwidth
-      .control
+      .#{$prefix}control
         flex-grow: 1
         flex-shrink: 0
   &.is-grouped
     display: flex
     justify-content: flex-start
-    & > .control
+    & > .#{$prefix}control
       flex-shrink: 0
       &:not(:last-child)
         margin-bottom: 0
@@ -465,7 +465,7 @@ $help-size: $size-small !default
       justify-content: flex-end
     &.is-grouped-multiline
       flex-wrap: wrap
-      & > .control
+      & > .#{$prefix}control
         &:last-child,
         &:not(:last-child)
           margin-bottom: 0.75rem
@@ -478,8 +478,8 @@ $help-size: $size-small !default
     +tablet
       display: flex
 
-.field-label
-  .label
+.#{$prefix}field-label
+  .#{$prefix}label
     font-size: inherit
   +mobile
     margin-bottom: 0.5rem
@@ -501,31 +501,31 @@ $help-size: $size-small !default
       font-size: $size-large
       padding-top: 0.375em
 
-.field-body
-  .field .field
+.#{$prefix}field-body
+  .#{$prefix}field .#{$prefix}field
     margin-bottom: 0
   +tablet
     display: flex
     flex-basis: 0
     flex-grow: 5
     flex-shrink: 1
-    .field
+    .#{$prefix}field
       margin-bottom: 0
-    & > .field
+    & > .#{$prefix}field
       flex-shrink: 1
       &:not(.is-narrow)
         flex-grow: 1
       &:not(:last-child)
         margin-right: 0.75rem
 
-.control
+.#{$prefix}control
   font-size: $size-normal
   position: relative
   text-align: left
   // Modifiers
   // DEPRECATED
   &.has-icon
-    .icon
+    .#{$prefix}icon
       color: $input-icon-color
       height: 2.25em
       pointer-events: none
@@ -533,43 +533,43 @@ $help-size: $size-small !default
       top: 0
       width: 2.25em
       z-index: 4
-    .input
+    .#{$prefix}input
       &:focus
-        & + .icon
+        & + .#{$prefix}icon
           color: $input-icon-active-color
       &.is-small
-        & + .icon
+        & + .#{$prefix}icon
           font-size: $size-small
       &.is-medium
-        & + .icon
+        & + .#{$prefix}icon
           font-size: $size-medium
       &.is-large
-        & + .icon
+        & + .#{$prefix}icon
           font-size: $size-large
     &:not(.has-icon-right)
-      .icon
+      .#{$prefix}icon
         left: 0
-      .input
+      .#{$prefix}input
         padding-left: 2.25em
     &.has-icon-right
-      .icon
+      .#{$prefix}icon
         right: 0
-      .input
+      .#{$prefix}input
         padding-right: 2.25em
   &.has-icons-left,
   &.has-icons-right
-    .input,
-    .select
+    .#{$prefix}input,
+    .#{$prefix}select
       &:focus
-        & ~ .icon
+        & ~ .#{$prefix}icon
           color: $input-icon-active-color
-      &.is-small ~ .icon
+      &.is-small ~ .#{$prefix}icon
         font-size: $size-small
-      &.is-medium ~ .icon
+      &.is-medium ~ .#{$prefix}icon
         font-size: $size-medium
-      &.is-large ~ .icon
+      &.is-large ~ .#{$prefix}icon
         font-size: $size-large
-    .icon
+    .#{$prefix}icon
       color: $input-icon-color
       height: 2.25em
       pointer-events: none
@@ -578,16 +578,16 @@ $help-size: $size-small !default
       width: 2.25em
       z-index: 4
   &.has-icons-left
-    .input,
-    .select select
+    .#{$prefix}input,
+    .#{$prefix}select select
       padding-left: 2.25em
-    .icon.is-left
+    .#{$prefix}icon.is-left
       left: 0
   &.has-icons-right
-    .input,
-    .select select
+    .#{$prefix}input,
+    .#{$prefix}select select
       padding-right: 2.25em
-    .icon.is-right
+    .#{$prefix}icon.is-right
       right: 0
   &.is-loading
     &::after

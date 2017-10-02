@@ -2,13 +2,13 @@ $nav-height: 3.25rem !default
 
 // Components
 
-.nav-toggle
+.#{$prefix}nav-toggle
   +hamburger($nav-height)
   // Responsiveness
   +tablet
     display: none
 
-.nav-item
+.#{$prefix}nav-item
   align-items: center
   display: flex
   flex-grow: 0
@@ -22,7 +22,7 @@ $nav-height: 3.25rem !default
     flex-shrink: 0
   img
     max-height: 1.75rem
-  .tag
+  .#{$prefix}tag
     &:first-child:not(:last-child)
       margin-right: 0.5rem
     &:last-child:not(:first-child)
@@ -31,7 +31,7 @@ $nav-height: 3.25rem !default
   +mobile
     justify-content: flex-start
 
-.nav-item a:not(.button),
+.#{$prefix}nav-item a:not(.button),
 a.nav-item:not(.button)
   color: $text-light
   &:hover
@@ -60,8 +60,8 @@ a.nav-item:not(.button)
 
 // Containers
 
-.nav-left,
-.nav-right
+.#{$prefix}nav-left,
+.#{$prefix}nav-right
   +overflow-touch
   align-items: stretch
   display: flex
@@ -72,14 +72,14 @@ a.nav-item:not(.button)
   +widescreen
     flex-basis: 0
 
-.nav-left
+.#{$prefix}nav-left
   justify-content: flex-start
   white-space: nowrap
 
-.nav-right
+.#{$prefix}nav-right
   justify-content: flex-end
 
-.nav-center
+.#{$prefix}nav-center
   align-items: stretch
   display: flex
   flex-grow: 0
@@ -88,7 +88,7 @@ a.nav-item:not(.button)
   margin-left: auto
   margin-right: auto
 
-.nav-menu
+.#{$prefix}nav-menu
   // Responsiveness
   +mobile
     &.nav-right
@@ -99,7 +99,7 @@ a.nav-item:not(.button)
       right: 0
       top: 100%
       position: absolute
-      .nav-item
+      .#{$prefix}nav-item
         border-top: 1px solid rgba($border, 0.5)
         padding: 0.75rem
       &.is-active
@@ -107,7 +107,7 @@ a.nav-item:not(.button)
 
 // Main container
 
-.nav
+.#{$prefix}nav
   align-items: stretch
   background-color: $white
   display: flex
@@ -115,7 +115,7 @@ a.nav-item:not(.button)
   position: relative
   text-align: center
   z-index: 10
-  & > .container
+  & > .#{$prefix}container
     align-items: stretch
     display: flex
     min-height: $nav-height

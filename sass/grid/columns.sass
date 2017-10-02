@@ -1,46 +1,46 @@
 $column-gap: 0.75rem !default
 
-.column
+.#{$prefix}column
   display: block
   flex-basis: 0
   flex-grow: 1
   flex-shrink: 1
   padding: $column-gap
-  .columns.is-mobile > &.is-narrow
+  .#{$prefix}columns.is-mobile > &.is-narrow
     flex: none
-  .columns.is-mobile > &.is-full
+  .#{$prefix}columns.is-mobile > &.is-full
     flex: none
     width: 100%
-  .columns.is-mobile > &.is-three-quarters
+  .#{$prefix}columns.is-mobile > &.is-three-quarters
     flex: none
     width: 75%
-  .columns.is-mobile > &.is-two-thirds
+  .#{$prefix}columns.is-mobile > &.is-two-thirds
     flex: none
     width: 66.6666%
-  .columns.is-mobile > &.is-half
+  .#{$prefix}columns.is-mobile > &.is-half
     flex: none
     width: 50%
-  .columns.is-mobile > &.is-one-third
+  .#{$prefix}columns.is-mobile > &.is-one-third
     flex: none
     width: 33.3333%
-  .columns.is-mobile > &.is-one-quarter
+  .#{$prefix}columns.is-mobile > &.is-one-quarter
     flex: none
     width: 25%
-  .columns.is-mobile > &.is-offset-three-quarters
+  .#{$prefix}columns.is-mobile > &.is-offset-three-quarters
     margin-left: 75%
-  .columns.is-mobile > &.is-offset-two-thirds
+  .#{$prefix}columns.is-mobile > &.is-offset-two-thirds
     margin-left: 66.6666%
-  .columns.is-mobile > &.is-offset-half
+  .#{$prefix}columns.is-mobile > &.is-offset-half
     margin-left: 50%
-  .columns.is-mobile > &.is-offset-one-third
+  .#{$prefix}columns.is-mobile > &.is-offset-one-third
     margin-left: 33.3333%
-  .columns.is-mobile > &.is-offset-one-quarter
+  .#{$prefix}columns.is-mobile > &.is-offset-one-quarter
     margin-left: 25%
   @for $i from 1 through 12
-    .columns.is-mobile > &.is-#{$i}
+    .#{$prefix}columns.is-mobile > &.is-#{$i}
       flex: none
       width: ($i / 12) * 100%
-    .columns.is-mobile > &.is-offset-#{$i}
+    .#{$prefix}columns.is-mobile > &.is-offset-#{$i}
       margin-left: ($i / 12) * 100%
   +mobile
     &.is-narrow-mobile
@@ -279,7 +279,7 @@ $column-gap: 0.75rem !default
       &.is-offset-#{$i}-fullhd
         margin-left: ($i / 12) * 100%
 
-.columns
+.#{$prefix}columns
   margin-left: (-$column-gap)
   margin-right: (-$column-gap)
   margin-top: (-$column-gap)
@@ -294,7 +294,7 @@ $column-gap: 0.75rem !default
     margin-left: 0
     margin-right: 0
     margin-top: 0
-    & > .column
+    & > .#{$prefix}column
       margin: 0
       padding: 0 !important
     &:not(:last-child)
@@ -316,11 +316,11 @@ $column-gap: 0.75rem !default
     &.is-desktop
       display: flex
 
-.columns.is-variable
+.#{$prefix}columns.is-variable
   --columnGap: 0.75rem
   margin-left: calc(-1 * var(--columnGap))
   margin-right: calc(-1 * var(--columnGap))
-  .column
+  .#{$prefix}column
     padding-left: var(--columnGap)
     padding-right: var(--columnGap)
   @for $i from 0 through 8

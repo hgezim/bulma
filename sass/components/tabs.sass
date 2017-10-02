@@ -26,7 +26,7 @@ $tabs-toggle-link-active-background-color: $primary !default
 $tabs-toggle-link-active-border-color: $primary !default
 $tabs-toggle-link-active-color: $primary-invert !default
 
-.tabs
+.#{$prefix}tabs
   +block
   +overflow-touch
   +unselectable
@@ -76,7 +76,7 @@ $tabs-toggle-link-active-color: $primary-invert !default
     &.is-right
       justify-content: flex-end
       padding-left: 0.75em
-  .icon
+  .#{$prefix}icon
     &:first-child
       margin-right: 0.5em
     &:last-child

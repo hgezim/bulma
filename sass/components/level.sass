@@ -1,4 +1,4 @@
-.level
+.#{$prefix}level
   +block
   align-items: center
   justify-content: space-between
@@ -8,7 +8,7 @@
     display: inline-block
     vertical-align: top
   // Modifiers
-  &.is-mobile
+  &.#{$prefix}is-mobile
     display: flex
     .#{$prefix}level-left,
     .#{$prefix}level-right
@@ -18,13 +18,13 @@
     .#{$prefix}level-item
       &:not(:last-child)
         margin-bottom: 0
-      &:not(.is-narrow)
+      &:not(.#{$prefix}is-narrow)
         flex-grow: 1
   // Responsiveness
   +tablet
     display: flex
     & > .#{$prefix}level-item
-      &:not(.is-narrow)
+      &:not(.#{$prefix}is-narrow)
         flex-grow: 1
 
 .#{$prefix}level-item

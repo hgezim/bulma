@@ -21,15 +21,15 @@ $message-body-pre-code-background-color: transparent !default
   font-size: $size-normal
   strong
     color: currentColor
-  a:not(.button):not(.tag)
+  a:not(.#{$prefix}button):not(.#{$prefix}tag)
     color: currentColor
     text-decoration: underline
   // Sizes
-  &.is-small
+  &.#{$prefix}is-small
     font-size: $size-small
-  &.is-medium
+  &.#{$prefix}is-medium
     font-size: $size-medium
-  &.is-large
+  &.#{$prefix}is-large
     font-size: $size-large
   // Colors
   @each $name, $pair in $colors
@@ -39,7 +39,7 @@ $message-body-pre-code-background-color: transparent !default
     $color-luminance: colorLuminance($color)
     $darken-percentage: $color-luminance * 70%
     $desaturate-percentage: $color-luminance * 30%
-    &.is-#{$name}
+    &.#{$prefix}is-#{$name}
       background-color: lighten($color, $color-lightning)
       .#{$prefix}message-header
         background-color: $color

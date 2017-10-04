@@ -15,17 +15,17 @@
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &.is-#{$name}
+    &.#{$prefix}is-#{$name}
       background-color: $color
       color: $color-invert
-      a:not(.button),
+      a:not(.#{$prefix}button),
       strong
         color: inherit
       .#{$prefix}title
         color: $color-invert
       .#{$prefix}subtitle
         color: rgba($color-invert, 0.9)
-        a:not(.button),
+        a:not(.#{$prefix}button),
         strong
           color: $color-invert
       .#{$prefix}nav
@@ -33,11 +33,11 @@
       .#{$prefix}nav-menu
         +mobile
           background-color: $color
-      a.nav-item,
-      .#{$prefix}nav-item a:not(.button)
+      a.#{$prefix}nav-item,
+      .#{$prefix}nav-item a:not(.#{$prefix}button)
         color: rgba($color-invert, 0.7)
         &:hover,
-        &.is-active
+        &.#{$prefix}is-active
           color: $color-invert
       .#{$prefix}tabs
         a
@@ -46,22 +46,22 @@
           &:hover
             opacity: 1
         li
-          &.is-active a
+          &.#{$prefix}is-active a
             opacity: 1
-        &.is-boxed,
-        &.is-toggle
+        &.#{$prefix}is-boxed,
+        &.#{$prefix}is-toggle
           a
             color: $color-invert
             &:hover
               background-color: rgba($black, 0.1)
-          li.is-active a
+          li.#{$prefix}is-active a
             &,
             &:hover
               background-color: $color-invert
               border-color: $color-invert
               color: $color
       // Modifiers
-      &.is-bold
+      &.#{$prefix}is-bold
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
@@ -75,38 +75,38 @@
             background-color: $color-invert
           &:hover
             background-color: rgba($black, 0.1)
-          &.is-active
+          &.#{$prefix}is-active
             span
               background-color: $color-invert
         .#{$prefix}nav-menu
           .#{$prefix}nav-item
             border-top-color: rgba($color-invert, 0.2)
   // Sizes
-  &.is-small
+  &.#{$prefix}is-small
     .#{$prefix}hero-body
       padding-bottom: 1.5rem
       padding-top: 1.5rem
-  &.is-medium
+  &.#{$prefix}is-medium
     +tablet
       .#{$prefix}hero-body
         padding-bottom: 9rem
         padding-top: 9rem
-  &.is-large
+  &.#{$prefix}is-large
     +tablet
       .#{$prefix}hero-body
         padding-bottom: 18rem
         padding-top: 18rem
-  &.is-halfheight,
-  &.is-fullheight
+  &.#{$prefix}is-halfheight,
+  &.#{$prefix}is-fullheight
     .#{$prefix}hero-body
       align-items: center
       display: flex
       & > .#{$prefix}container
         flex-grow: 1
         flex-shrink: 1
-  &.is-halfheight
+  &.#{$prefix}is-halfheight
     min-height: 50vh
-  &.is-fullheight
+  &.#{$prefix}is-fullheight
     min-height: 100vh
 
 // Components
@@ -122,7 +122,7 @@
     top: 50%
     transform: translate3d(-50%, -50%, 0)
   // Modifiers
-  &.is-transparent
+  &.#{$prefix}is-transparent
     opacity: 0.3
   // Responsiveness
   +mobile

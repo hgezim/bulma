@@ -26,7 +26,7 @@ $breadcrumb-item-separator-color: $text !default
     display: flex
     &:first-child a
       padding-left: 0
-    &.is-active
+    &.#{$prefix}is-active
       a
         color: $breadcrumb-item-active-color
         cursor: default
@@ -46,29 +46,29 @@ $breadcrumb-item-separator-color: $text !default
     &:last-child
       margin-left: 0.5em
   // Alignment
-  &.is-centered
+  &.#{$prefix}is-centered
     ol, ul
       justify-content: center
-  &.is-right
+  &.#{$prefix}is-right
     ol, ul
       justify-content: flex-end
   // Sizes
-  &.is-small
+  &.#{$prefix}is-small
     font-size: $size-small
-  &.is-medium
+  &.#{$prefix}is-medium
     font-size: $size-medium
-  &.is-large
+  &.#{$prefix}is-large
     font-size: $size-large
   // Styles
-  &.has-arrow-separator
+  &.#{$prefix}has-arrow-separator
     li + li::before
       content: "\02192"
-  &.has-bullet-separator
+  &.#{$prefix}has-bullet-separator
     li + li::before
       content: "\02022"
-  &.has-dot-separator
+  &.#{$prefix}has-dot-separator
     li + li::before
       content: "\000b7"
-  &.has-succeeds-separator
+  &.#{$prefix}has-succeeds-separator
     li + li::before
       content: "\0227B"

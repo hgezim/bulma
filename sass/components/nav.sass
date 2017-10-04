@@ -31,15 +31,15 @@ $nav-height: 3.25rem !default
   +mobile
     justify-content: flex-start
 
-.#{$prefix}nav-item a:not(.button),
-a.nav-item:not(.button)
+.#{$prefix}nav-item a:not(.#{$prefix}button),
+a.#{$prefix}nav-item:not(.#{$prefix}button)
   color: $text-light
   &:hover
     color: $link-hover
   // Modifiers
-  &.is-active
+  &.#{$prefix}is-active
     color: $link-active
-  &.is-tab
+  &.#{$prefix}is-tab
     border-bottom: 1px solid transparent
     border-top: 1px solid transparent
     padding-bottom: calc(0.75rem - 1px)
@@ -49,13 +49,13 @@ a.nav-item:not(.button)
     &:hover
       border-bottom-color: $primary
       border-top-color: transparent
-    &.is-active
+    &.#{$prefix}is-active
       border-bottom: 3px solid $primary
       color: $primary
       padding-bottom: calc(0.75rem - 3px)
   // Responsiveness
   +desktop
-    &.is-brand
+    &.#{$prefix}is-brand
       padding-left: 0
 
 // Containers
@@ -91,7 +91,7 @@ a.nav-item:not(.button)
 .#{$prefix}nav-menu
   // Responsiveness
   +mobile
-    &.nav-right
+    &.#{$prefix}nav-right
       background-color: $white
       box-shadow: 0 4px 7px rgba($black, 0.1)
       left: 0
@@ -102,7 +102,7 @@ a.nav-item:not(.button)
       .#{$prefix}nav-item
         border-top: 1px solid rgba($border, 0.5)
         padding: 0.75rem
-      &.is-active
+      &.#{$prefix}is-active
         display: block
 
 // Main container
@@ -121,5 +121,5 @@ a.nav-item:not(.button)
     min-height: $nav-height
     width: 100%
   // Modifiers
-  &.has-shadow
+  &.#{$prefix}has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)

@@ -24,9 +24,9 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   vertical-align: top
   // States
   &:focus,
-  &.is-focused,
+  &.#{$prefix}is-focused,
   &:active,
-  &.is-active
+  &.#{$prefix}is-active
     outline: none
   &[disabled]
     cursor: not-allowed
